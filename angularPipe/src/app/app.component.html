@@ -1,1 +1,23 @@
-<h1>Hello World!</h1>
+
+    
+    
+    <h2>Employee Table</h2>
+    
+    <table>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Department</th>
+        <th>Grade</th>
+      </tr>
+      <tr *ngFor="let emp of empsArray">
+       <td>{{emp.empno}}</td>
+       <td>{{emp.ename}}</td>
+       <td>{{emp.job}}</td>
+       <td>{{emp.deptno}}</td>
+       <td>{{emp.grade  | empGadget}}</td>
+      </tr>
+    </table>
+    
+   
