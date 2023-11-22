@@ -8,13 +8,13 @@ export class EmpGadgetPipe implements PipeTransform {
 
   transform(input: number): string {
    let result:string = '';
-   if(input == 2 || input == 3){
-      result = 'A';
-   }else if(input == 1){
-    result = 'A+';
-   }else if(input > 3){
-    result = 'B';
-   }
+   if(input == 1 ){
+      result = 'Outstanding';
+   }else if(input == 2){
+    result = 'Excellent';
+   }else if(input == 3){
+    result = 'Good';
+   }else result = 'Average';
    return result;
   }
 

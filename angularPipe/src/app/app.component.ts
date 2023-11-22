@@ -9,19 +9,15 @@ import { EmpGadgetPipe } from './emp-gadget.pipe';
 })
 export class AppComponent {
   title = 'angularPipe';
- 
-  public  empsArray:Employee[]  =  [
-    {  empno : 10256, ename:"Scott", job: "Manager", deptno : 10, grade: 1  },
-    {  empno : 10257, ename:"Smith", job: "Lead", deptno : 20, grade: 2  },
-    {  empno : 10258, ename:"Sandy", job: "Programmer", deptno : 30, grade: 3  },
-    {  empno : 10259, ename:"Sam", job: "Tester", deptno : 40, grade: 4  } ,
-    {  empno : 10256, ename:"Scott", job: "Manager", deptno : 10, grade: 1  },
-    {  empno : 10257, ename:"Smith", job: "Lead", deptno : 20, grade: 2  },
-    {  empno : 10258, ename:"Sandy", job: "Programmer", deptno : 30, grade: 3  },
-    {  empno : 10259, ename:"Sam", job: "Tester", deptno : 40, grade: 4  } ,
-    {  empno : 10256, ename:"Scott", job: "Manager", deptno : 10, grade: 1  },
-    {  empno : 10257, ename:"Smith", job: "Lead", deptno : 20, grade: 2  },
-    {  empno : 10258, ename:"Sandy", job: "Programmer", deptno : 30, grade: 3  },
-    {  empno : 10259, ename:"Sam", job: "Tester", deptno : 40, grade: 4  } 
-  ];	
+
+  public empsArray: Employee[] = [
+    { empno: 10256, ename: "Scott", grade: 1 },
+    { empno: 10257, ename: "Smith", grade: 3 },
+    { empno: 10258, ename: "Sandy", grade: 3 },
+    { empno: 10259, ename: "Sam", grade: 4 },
+    { empno: 10256, ename: "Haris", grade: 1 },
+    { empno: 10257, ename: "Joy", grade: 4 },
+    { empno: 10258, ename: "Candy", grade: 3 },
+    { empno: 10259, ename: "Sameer", grade: 2 },
+  ];
 }
