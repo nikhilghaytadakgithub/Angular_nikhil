@@ -1,0 +1,10 @@
+<h3  align="center">Working with Custom Pipes in Angular Assignment 3</h3>
+<hr/>
+<button class="button" (click)="clickMe('prev')" [disabled]="prev==0">Prev</button>
+<button class="button" (click)="clickMe('next')" [disabled]="next==total">Next</button>
+<div class="card" *ngFor="let item of empsArray | slice : prev:next">
+  <div class="container">
+    <h4><b>{{item.ename}}</b></h4> 
+    <p>{{item.job}}</p> 
+  </div>
+</div>
