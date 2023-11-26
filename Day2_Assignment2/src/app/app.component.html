@@ -1,0 +1,5 @@
+<app-category (sendClick)="sendToCategory($event)"></app-category>
+<br/>
+<div class="card" *ngFor="let item of productList">
+  <app-product-list  [prod]="item" [selectedCategory]="sendCategory"></app-product-list>
+</div>
