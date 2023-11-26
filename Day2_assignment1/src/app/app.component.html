@@ -1,0 +1,4 @@
+
+<app-product *ngFor= "let item of productList" [prod]="item" 
+   (showCategory) = "click_parent($event)"
+></app-product>
