@@ -1,0 +1,49 @@
+Select Display Mode :
+<select [(ngModel)]="displayMode">
+    <option>List</option>
+    <option>Table</option>
+    <option>Card</option>
+</select>
+Filter :
+<select [(ngModel)]="filterJob">
+    <option>Manager</option>
+    <option>Lead</option>
+    <option>Programmer</option>
+    <option>Tester</option>
+
+</select>
+<hr />
+<div [ngSwitch]="displayMode">
+  <ng-container *ngSwitchCase="'Card'">
+<div  class="card" *ngFor="let item of empsArray | filter: filterJob">
+  <div class="container">
+    <h4><b>{{item.ename}}</b></h4> 
+    <p>{{item.job}}</p> 
+  </div>
+</div>
+</ng-container>
+<ng-container *ngSwitchCase="'Table'">
+  <table>
+    <tr>
+      <th>Employee ID</th>
+      <th>Name</th>
+      <th>Job</th>
+      <th>Department</th>
+
+    </tr>
+    <tr *ngFor="let emp of empsArray | filter: filterJob">
+      <td>{{emp.empno}}</td>
+      <td>{{emp.ename}}</td>
+      <td>{{emp.job }}</td>
+      <td>{{emp.deptno }}</td>
+
+    </tr>
+  </table>
+</ng-container >
+<ng-container *ngSwitchCase="'List'">
+  <ul  *ngFor="let emp of empsArray | filter: filterJob">
+    <li>{{emp.ename}}</li>
+  </ul>
+</ng-container>
+
+</div>
