@@ -1,0 +1,40 @@
+<form #registartionForm="ngForm" (ngSubmit)="clickForm()">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="OwnerName"><b>Owner Name</b></label>
+      <input type="text" placeholder="Enter Name" [(ngModel)]="OwnerName1" #OwnerName="ngModel" name="OwnerName" id="OwnerName" required>
+      <span class="error" *ngIf="OwnerName.invalid && OwnerName.dirty">First Name is required</span>
+      <br /><br />
+
+      <label for="contactNumber"><b>Contact Number</b></label>
+      <input type="number" placeholder="Enter Contact Number" [(ngModel)]="contactNumber1" #contactNumber ="ngModel" name="contactNumber" id="contactNumber" required>
+      <span class="error" *ngIf="contactNumber.invalid && contactNumber.dirty">Contact Number is required</span>
+      <br /><br />
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" [(ngModel)]="email1" #email ="ngModel" name="email" id="email" required>
+      <span class="error" *ngIf="email.invalid && email.dirty">Email is required</span>
+      <br /><br />
+
+      <label for="regiNumber"><b>Vehicle Registration Number</b></label>
+      <input type="number" placeholder="Enter Vehicle Registration Number" [(ngModel)]="regiNumber1" #regiNumber ="ngModel" name="regiNumber" id="regiNumber" required>
+      <span class="error" *ngIf="regiNumber.invalid && regiNumber.dirty">Registration Number is required</span>
+      <br /><br />
+
+      <label for="address"><b>Address</b></label>
+      <input type="text" placeholder="Enter Address"  [(ngModel)]="address1" #address ="ngModel" name="address" id="address" required>
+      <span class="error" *ngIf="address.invalid && address.dirty">Address is required</span>
+      <br /><br />
+      <hr>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+  
+      <button type="submit" class="registerbtn" [disabled]="registartionForm.invalid">Register</button>
+    </div>
+    
+    <div class="container signin">
+      <p>Already have an account? <a href="#">Sign in</a>.</p>
+    </div>
+  </form>
+  
